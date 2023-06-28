@@ -21,8 +21,9 @@ public class SwiftFlutterLivePlugin: NSObject, FlutterPlugin {
         let enabled = args["enabled"]!
 
         let session = AVAudioSession.sharedInstance()
-        try? session.setCategory(AVAudioSession.Category.playAndRecord)
-        try? session.setMode(AVAudioSession.Mode.voiceChat)
+        NSLog("soloAmbient")
+        try? session.setCategory(AVAudioSession.Category.soloAmbient)
+        try? session.setMode(AVAudioSession.Mode.moviePlayback)
         if enabled {
             try? session.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
         } else {

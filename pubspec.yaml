@@ -2,17 +2,21 @@ name: flutter_live
 version: 1.0.17
 description: Live streaming player, iOS+Android, RTMP/HTTP-FLV/HLS/WebRTC, by Flutter+SRS.
 homepage: https://github.com/ossrs/flutter_live
+publish_to: none
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
   flutter: ">=1.20.0 <2.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  fijkplayer: ^0.8.8
+  fijkplayer:
+    git:
+      url: https://github.com/diegothucao/cfijkplayer.git
+      ref: master
   flutter_webrtc: ^0.6.3
-  camera_with_rtmp: ^0.3.2
+  #camera_with_rtmp: ^0.3.2
 
 dev_dependencies:
   flutter_test:
